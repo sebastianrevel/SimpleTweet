@@ -29,15 +29,15 @@ public class TimelineActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_timeline);
         client = TwitterApp.getRestClient(this);
-        // find the RecyclerView
+        // Find the RecyclerView
         rvTweets = (RecyclerView) findViewById(R.id.rvTweet);
-        // init the arraylist (data source)
+        // Init the arraylist (data source)
         tweets = new ArrayList<>();
-        // construct the adapter from this datasource
+        // Construct the adapter from this datasource
         tweetAdapter = new TweetAdapter(tweets);
         // RecyclerView setup (layout manager, use adapter)
         rvTweets.setLayoutManager(new LinearLayoutManager(this));
-        //set the adapter
+        // Set the adapter
         rvTweets.setAdapter(tweetAdapter);
         populateTimeline();
     }
@@ -51,17 +51,17 @@ public class TimelineActivity extends AppCompatActivity {
 
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONArray response) {
-                // iterate through the JSON array
-                // for each entry, deserialize the JSON object
-                for (int i = 0; i < response.length(); i++){
-                    // convert each object to a tweet model
-                    // add that tweet model to our data source
-                    // notify the adapter that we've added an item
+                // Iterate through the JSON array
+                // For each entry, deserialize the JSON object
+                for (int i = 0; i < response.length(); i++) {
+                    // Convert each object to a tweet model
+                    // Add that tweet model to our data source
+                    // Notify the adapter that we've added an item
                     try {
                         Tweet tweet = Tweet.fromJSON(response.getJSONObject(i));
                         tweets.add(tweet);
                         tweetAdapter.notifyItemInserted(tweets.size() - 1);
-                    } catch (JSONException e){
+                    } catch (JSONException e) {
                         e.printStackTrace();
                     }
 

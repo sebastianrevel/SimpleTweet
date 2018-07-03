@@ -10,11 +10,11 @@ public class Tweet {
     public User user;
     public String createdAt;
 
-    //deserialize the JSON
+    // Deserialize the JSON
     public static Tweet fromJSON(JSONObject jsonObject) throws JSONException {
         Tweet tweet = new Tweet();
 
-        // extract value from JSON
+        // Extract value from JSON
         tweet.body = jsonObject.getString("text");
         tweet.uid = jsonObject.getLong("id");
         tweet.createdAt = jsonObject.getString("created_at");

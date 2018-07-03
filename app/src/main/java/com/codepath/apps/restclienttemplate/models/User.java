@@ -13,7 +13,7 @@ public class User {
     public static User fromJSON(JSONObject json) throws JSONException {
         User user = new User();
 
-        //extraction of values
+        // Extraction of values
         user.name = json.getString("name");
         user.uid = json.getLong("id");
         user.screenName = json.getString("screen_name");
