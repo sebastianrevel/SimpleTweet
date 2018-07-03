@@ -51,7 +51,6 @@ public class TimelineActivity extends AppCompatActivity {
 
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONArray response) {
-//                Log.d("TwitterClient", response.toString());
                 // iterate through the JSON array
                 // for each entry, deserialize the JSON object
                 for (int i = 0; i < response.length(); i++){
