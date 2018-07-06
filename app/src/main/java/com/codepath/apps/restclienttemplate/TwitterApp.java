@@ -28,7 +28,7 @@ public class TwitterApp extends Application {
         myDatabase = Room.databaseBuilder(this, MyDatabase.class,
                 MyDatabase.NAME).fallbackToDestructiveMigration().build();
 
-        // use chrome://inspect to inspect your SQL database
+        // Use chrome://inspect to inspect your SQL database
         Stetho.initializeWithDefaults(this);
     }
 

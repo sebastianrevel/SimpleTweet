@@ -30,6 +30,7 @@ public class ComposeActivity extends AppCompatActivity {
             postTweet(strValue);
         }
     };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,7 +40,7 @@ public class ComposeActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayUseLogoEnabled(true);
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.rgb(29, 161, 242)));
         client = TwitterApp.getRestClient(this);
-        Button button = (Button)findViewById(R.id.post_button);
+        Button button = findViewById(R.id.post_button);
         // Register the onClick listener with the implementation above
         button.setOnClickListener(postListen);
     }
@@ -68,6 +69,7 @@ public class ComposeActivity extends AppCompatActivity {
                 Log.d("TwitterClient", response.toString());
 
             }
+
             @Override
             public void onSuccess(int statusCode, Header[] headers, String responseString) {
                 Log.d("TwitterClient", responseString.toString());

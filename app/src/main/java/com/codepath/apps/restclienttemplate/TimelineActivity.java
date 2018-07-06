@@ -71,6 +71,7 @@ public class TimelineActivity extends AppCompatActivity {
         populateTimeline();
 
     }
+
     public void fetchTimelineAsync(int page) {
         // Send the network request to fetch the updated data
         // `client` here is an instance of Android Async HTTP
@@ -120,7 +121,7 @@ public class TimelineActivity extends AppCompatActivity {
         }
     }
 
-    public void composeMessage () {
+    public void composeMessage() {
         Intent i = new Intent(TimelineActivity.this, ComposeActivity.class);
         startActivityForResult(i, REQUEST_CODE);
     }

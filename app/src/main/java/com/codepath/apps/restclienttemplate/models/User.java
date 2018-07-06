@@ -12,18 +12,10 @@ public class User {
     String screenName;
     String profileImageUrl;
 
-    public long getUid() {
-        return uid;
-    }
-
     public String getProfileImageUrl() {
         return profileImageUrl;
     }
 
-    public String getScreenName() {
-
-        return screenName;
-    }
     public String getName() {
         return name;
     }
