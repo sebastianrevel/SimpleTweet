@@ -1,6 +1,8 @@
 package com.codepath.apps.restclienttemplate;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -23,7 +25,7 @@ public class ComposeActivity extends AppCompatActivity {
 
     private View.OnClickListener postListen = new View.OnClickListener() {
         public void onClick(View v) {
-            EditText simpleEditText = (EditText) findViewById(R.id.etCompose);
+            EditText simpleEditText = findViewById(R.id.etCompose);
             String strValue = simpleEditText.getText().toString();
             postTweet(strValue);
         }
@@ -32,6 +34,10 @@ public class ComposeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.compose_activity);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setLogo(R.drawable.ic_twitter);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.rgb(29, 161, 242)));
         client = TwitterApp.getRestClient(this);
         Button button = (Button)findViewById(R.id.post_button);
         // Register the onClick listener with the implementation above
