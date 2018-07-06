@@ -19,7 +19,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:text="TextView" />
+        android:text="TextView"
+        android:autoLink="all"
+        android:linksClickable="true" />
 
     <TextView
         android:id="@+id/tvBody"
@@ -27,7 +29,9 @@
         android:layout_height="34dp"
         android:layout_alignBottom="@+id/ivProfileImage"
         android:layout_alignParentEnd="true"
-        android:text="TextView" />
+        android:text="TextView"
+        android:autoLink="all"
+        android:linksClickable="true" />
 
     <TextView
         android:id="@+id/tvTime"

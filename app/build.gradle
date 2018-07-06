@@ -30,8 +30,14 @@ android {
         }
     }
 }
-
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
 dependencies {
+    implementation "android.arch.paging:runtime:1.0.0"
     implementation 'org.parceler:parceler-api:1.1.6'
     annotationProcessor 'org.parceler:parceler:1.1.6'
     implementation fileTree(dir: 'libs', include: '*.jar')
