@@ -9,6 +9,8 @@
         android:id="@+id/etCompose"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/post_button"
         android:hint="What's happening?">
 
     </EditText>
@@ -17,10 +19,11 @@
         android:id="@+id/post_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
         android:drawableLeft="@drawable/ic_post"
         android:text="Post"
+        android:textStyle="bold|italic"
         tools:layout_editor_absoluteX="294dp"
         tools:layout_editor_absoluteY="459dp" />
 
